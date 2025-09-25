@@ -5,17 +5,18 @@
 		<table border="1" width="100%" cellspacing="0" cellpadding="6">
 			<tr>
 				<td width="30%" valign="top">
-					<div style="width:100%;height:200px;background:#eee;text-align:center;line-height:200px;">
-						<c:out value="[poster]"/>
-					</div>
+					<!-- Hiển thị ảnh poster -->
+					<img src="${video.poster}"
+						 alt="${video.title}"
+						 style="width:100%; height:200px; object-fit:cover; border-radius:6px;">
 				</td>
 				<td valign="top">
 					<div>Tiêu đề: <strong>${video.title}</strong></div>
 					<div>Mã video: ${video.videoId}</div>
 					<div>Category name: <c:out value='${category.categoryName}'/></div>
 					<div>View: ${video.views}</div>
-					<div>Share(${shareCount})</div>
-					<div>Like(${likeCount})</div>
+					<div>Share (${shareCount})</div>
+					<div>Like (${likeCount})</div>
 				</td>
 			</tr>
 			<tr>
@@ -27,5 +28,6 @@
 		<div>Video không tồn tại.</div>
 	</c:otherwise>
 </c:choose>
+
 
 
